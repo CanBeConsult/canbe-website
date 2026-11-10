@@ -149,20 +149,15 @@
   .contact h2{font-size:3.2rem;font-weight:700;margin:0 0 1.4rem;line-height:1.1}
   .contact h2 span{color:var(--gold)}
   .contact .lede{font-size:1.1rem;opacity:.8;margin:0 0 3.5rem}
-  form{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);padding:3.5rem;text-align:left}
-  fieldset{border:none;margin-bottom:2.5rem}
-  legend{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.55);margin-bottom:.9rem}
-  .sentence{font-size:1.2rem;line-height:2.1}
-  input,select,textarea{background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.3);
-    color:var(--petal);font-family:'Public Sans',sans-serif;font-size:1.1rem;padding:0 .4rem;outline:none}
-  input:focus,select:focus,textarea:focus{border-color:var(--gold)}
-  input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45)}
-  textarea{width:100%;border:1px solid rgba(255,255,255,.2);font-size:1rem;padding:1rem;min-height:110px;
-    margin-top:1rem;resize:vertical}
-  select option{background:var(--night)}
-  .submit{background:var(--gold);color:var(--night);border:none;padding:1.1rem 3rem;font-weight:700;
-    text-transform:uppercase;letter-spacing:.08em;font-size:.9rem;cursor:pointer;font-family:'Public Sans',sans-serif}
-  .submit:hover{opacity:.88}
+  .reach{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);padding:3.5rem;text-align:left}
+  .reach .k{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.55);margin-bottom:1.2rem}
+  .reach ul{list-style:none}
+  .reach li{display:flex;gap:.7rem;font-size:1.1rem;margin-bottom:.9rem}
+  .reach li::before{content:"—";color:var(--gold)}
+  .reach-cta{text-align:center;margin-top:3rem}
+  .reach-cta .btn-gold{padding:1.1rem 3rem}
+  .reach-addr{font-size:1rem;margin-top:1.4rem}
+  .reach-addr a{color:var(--gold)}
   .formnote{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:1.2rem}
 
   /* FOOTER */
@@ -193,7 +188,7 @@
     nav{padding:1rem 1.5rem}
     .navlinks{gap:1.2rem}
     .contact h2,.who-section h2{font-size:2.4rem}
-    form{padding:2rem}
+    .reach{padding:2rem}
     footer{padding:3.5rem 2rem 2rem}
   }
 
@@ -230,11 +225,10 @@
     .commit{padding:1.75rem}
 
     .contact .lede br{display:none}
-    form{padding:1.35rem}
-    .sentence{font-size:1.05rem;line-height:1.9}
-    .sentence input{display:block;width:100% !important;margin:.1rem 0 .5rem;padding:.35rem .2rem}
-    .sentence .dot{display:none}
-    .submit{width:100%;padding:1.1rem 1rem}
+    .reach{padding:1.35rem}
+    .reach li{font-size:1.02rem}
+    .reach-cta{margin-top:2rem}
+    .reach-cta .btn-gold{display:block;padding:1.1rem 1rem}
     .foot-bottom{flex-direction:column;align-items:flex-start}
   }
 </style>
@@ -485,46 +479,21 @@
     <h2>Start the Honest<br><span>Conversation.</span></h2>
     <p class="lede">This is not a contact form. This is the beginning of a partnership.<br>Tell us what you're carrying.</p>
 
-    <form action="mailto:canbeconsulting@ik.me" method="post" enctype="text/plain">
-      <fieldset>
-        <legend>Who You Are</legend>
-        <div class="sentence">
-          My name is <input type="text" name="Name" placeholder="your name" required style="width:180px">
-          and I lead <input type="text" name="Organisation" placeholder="your organisation" style="width:200px">
-          as <input type="text" name="Role" placeholder="your role" style="width:180px"><span class="dot">.</span>
-        </div>
-      </fieldset>
+    <div class="reach">
+      <div class="k">In Your Message, Tell Us</div>
+      <ul>
+        <li><span>Who you are, your organisation and your role</span></li>
+        <li><span>The real challenge you are facing right now — what's actually happening, not the official version</span></li>
+        <li><span>What you need support with: culture, leadership, strategy</span></li>
+        <li><span>The best way to reach you, in English or Français</span></li>
+      </ul>
 
-      <fieldset>
-        <legend>The Challenge</legend>
-        <div style="font-size:1.1rem">The real challenge we are facing right now is:</div>
-        <textarea name="Challenge" required placeholder="describe what's actually happening — not the official version"></textarea>
-      </fieldset>
-
-      <fieldset>
-        <legend>What You Need</legend>
-        <div class="sentence">
-          We need support with <input type="text" name="Needs Support With" placeholder="culture, leadership, strategy" style="width:280px"><span class="dot">.</span>
-        </div>
-      </fieldset>
-
-      <fieldset style="margin-bottom:0">
-        <legend>How To Reach You</legend>
-        <div class="sentence">
-          Reach me at <input type="email" name="Email" placeholder="your@email.com" required style="width:220px">
-          in
-          <select name="Language">
-            <option value="English">English</option>
-            <option value="Français">Français</option>
-          </select>.
-        </div>
-      </fieldset>
-
-      <div style="text-align:center;margin-top:3.5rem">
-        <button class="submit" type="submit">Start the Conversation</button>
+      <div class="reach-cta">
+        <a class="btn btn-gold" href="mailto:canbeconsulting@ik.me?subject=Starting%20the%20honest%20conversation">Start the Conversation</a>
+        <p class="reach-addr">Or write to us directly at <a href="mailto:canbeconsulting@ik.me?subject=Starting%20the%20honest%20conversation">canbeconsulting@ik.me</a></p>
         <p class="formnote">All communications are strictly confidential. We make all possible attempts to respond within 2 business days.</p>
       </div>
-    </form>
+    </div>
   </div>
 </section>
 
