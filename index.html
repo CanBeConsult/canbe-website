@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CanBe Consulting — Human. Honest. Forward.</title>
+<meta name="description" content="CanBe Consulting delivers the human work — accountability, trust, judgment, presence — that no model can replicate. Workplace integrity, executive advisory and human-centred change, in English and French.">
+<meta name="author" content="Céline Tacnière">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201000.00%201000.00%22%20width%3D%221000%22%20height%3D%221000%22%3E%3Ctitle%3ECanBe%20favicon%3C/title%3E%3Cmetadata%3E%3Crdf%3ARDF%20xmlns%3Ardf%3D%22http%3A//www.w3.org/1999/02/22-rdf-syntax-ns%23%22%20xmlns%3Adc%3D%22http%3A//purl.org/dc/elements/1.1/%22%3E%3Crdf%3ADescription%3E%3Cdc%3Atitle%3ECanBe%20favicon%3C/dc%3Atitle%3E%3Cdc%3Acreator%3EC%C3%A9line%20Tacni%C3%A8re%3C/dc%3Acreator%3E%3Cdc%3Arights%3E%C2%A9%202026%20CanBe%20Consulting%20%288936145%20Canada%20Inc.%29%3C/dc%3Arights%3E%3C/rdf%3ADescription%3E%3C/rdf%3ARDF%3E%3C/metadata%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22gf%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%22207.65%22%20y1%3D%220%22%20x2%3D%22843.20%22%20y2%3D%220%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%238A4FBF%22/%3E%3Cstop%20offset%3D%220.524%22%20stop-color%3D%22%23C09FDF%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23C8A951%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%271000.0%27%20height%3D%271000.0%27%20rx%3D%27200.0%27%20fill%3D%27%232A1A42%27/%3E%3Cpath%20fill%3D%22url%28%23gf%29%22%20fill-rule%3D%22evenodd%22%20d%3D%22M207.65%2C270.00%20L540.86%2C270.00%20L843.20%2C500.00%20L540.86%2C730.00%20L207.65%2C730.00%20Z%20M288.92%2C351.27%20L516.48%2C351.27%20L714.79%2C500.00%20L516.48%2C648.73%20L288.92%2C648.73%20Z%22/%3E%3C/svg%3E">
+<!-- When you deploy, also copy favicon.ico and apple-touch-icon.png from the logo pack into the site root and uncomment:
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#5B2D8E; --mid:#8A4FBF; --lav:#C09FDF; --gold:#C8A951;
+    --night:#2A1A42; --petal:#F7F4FB; --ink-gold:#7A651F;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Public Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+       background:var(--petal);color:var(--night);line-height:1.6;overflow-x:hidden}
+  img{max-width:100%}
+  .wrap{max-width:1320px;margin:0 auto}
+  .eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+  h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
+  .justify{text-align:justify;text-justify:inter-word;hyphens:auto}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:1000;background:rgba(247,244,251,.92);backdrop-filter:blur(8px);
+      display:flex;justify-content:space-between;align-items:center;gap:1.5rem;
+      padding:1.1rem 3rem;border-bottom:1px solid rgba(42,26,66,.1);flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:.7rem}
+  .brand .name{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-weight:800}
+  .brand .name span{color:var(--deep)}
+  .navlinks{display:flex;gap:2.2rem;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+  .navlinks a{text-decoration:none;color:var(--night)}
+  .navlinks a:hover{color:var(--deep)}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+  .btn-violet{background:var(--deep);color:var(--petal);padding:.8rem 1.6rem;font-size:.75rem}
+  .btn-violet:hover{background:var(--night)}
+  .btn-night{background:var(--night);color:var(--petal);padding:1rem 2rem;font-size:.8rem}
+  .btn-night:hover{background:var(--deep)}
+  .btn-gold{background:var(--gold);color:var(--night);padding:1.2rem;font-size:.85rem;text-align:center}
+  .btn-gold:hover{opacity:.88}
+
+  /* HERO */
+  header.hero{padding:4.5rem 3rem 5.5rem}
+  .hero-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;
+              gap:4rem;align-items:end}
+  .hero-copy{padding:0;max-width:none}
+  .hero-copy h1{font-size:4rem;line-height:1.06;font-weight:700;margin:0 0 1.8rem}
+  .hero-copy h1 em{color:var(--deep);font-style:italic}
+  .hero-copy p{font-size:1.2rem;margin:0 0 2.4rem;opacity:.85}
+  .hero-cta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+  .hero-note{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+             color:var(--deep);border-left:2px solid var(--gold);padding-left:1rem}
+  .hero-panel{margin:0;width:100%;min-height:460px;
+              background:linear-gradient(150deg,#3A2358 0%,var(--night) 60%);
+              border:1px solid rgba(200,169,81,.35);padding:3.5rem 3rem;text-align:center;
+              display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .hero-panel svg{width:58%;max-width:280px;height:auto}
+  .hero-panel .line{font-family:'Playfair Display',Georgia,serif;font-style:italic;color:var(--petal);
+                    font-size:1.35rem;margin-top:2rem}
+  .hero-panel .sub{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:1rem}
+
+  /* SERVICES */
+  section{padding:5.5rem 3rem}
+  .svc-head{display:grid;grid-template-columns:1fr 1.3fr;gap:4rem;align-items:end;margin-bottom:3.5rem}
+  .svc-head h2{font-size:2.9rem;font-weight:700;line-height:1.08}
+  .svc-head p{font-size:1.15rem;opacity:.85}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
+  .card{background:var(--night);color:var(--petal);padding:2.6rem 2.2rem;border-top:3px solid var(--gold);
+        display:flex;flex-direction:column}
+  .card .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.8rem}
+  .card .label{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+  .card .num{font-family:'Playfair Display',Georgia,serif;font-size:2.2rem;color:rgba(255,255,255,.12);line-height:1}
+  .card h3{font-size:1.5rem;font-weight:700;margin:0 0 1.4rem;line-height:1.25}
+  .block{border-left:2px solid rgba(255,255,255,.25);padding-left:1rem;margin-bottom:1.4rem}
+  .block.gold{border-left-color:var(--gold)}
+  .block .k{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+            color:rgba(255,255,255,.5);margin-bottom:.5rem}
+  .block.gold .k{color:var(--gold)}
+  .block p{font-size:.95rem;opacity:.88}
+  details{margin-top:auto}
+  details summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;
+    border-top:1px solid rgba(255,255,255,.15);padding-top:1.2rem;margin-top:1.5rem;
+    font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+  details summary::-webkit-details-marker{display:none}
+  details ul{list-style:none;padding-top:1.3rem}
+  details li{display:flex;gap:.6rem;margin-bottom:.85rem;font-size:.9rem}
+  details li::before{content:"—";color:var(--gold)}
+  details li span{opacity:.85}
+
+  /* WHO WE ARE */
+  .dark{background:var(--night);color:var(--petal)}
+  .dark h2{color:var(--petal)}
+  .who-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:4.5rem}
+  .pull{font-size:2rem;font-style:italic;font-weight:600;line-height:1.3;margin:0 0 1.5rem}
+  .who-grid p{font-size:1.05rem;opacity:.85;margin:0 0 1.2rem}
+  .creds{display:flex;flex-direction:column;gap:.9rem;margin-bottom:2.5rem;list-style:none}
+  .creds li{display:flex;gap:.7rem;font-size:.98rem;opacity:.9}
+  .creds li::before{content:"•";color:var(--gold)}
+  .triad{border-left:2px solid var(--gold);padding:1.2rem 0 1.2rem 1.6rem;margin:2.2rem 0 0;
+         font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;color:var(--gold)}
+  .panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:2.5rem}
+  .panel h3{font-size:1.6rem;font-weight:700;margin:0 0 1rem}
+  .panel .k{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+            color:rgba(255,255,255,.5);margin-bottom:1rem}
+  .langs{display:flex;gap:.8rem;margin-bottom:1.3rem;flex-wrap:wrap}
+  .langs div{border:1px solid rgba(255,255,255,.25);padding:.5rem 1.1rem;font-size:.9rem}
+  .traits{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;margin-top:4.5rem;
+          padding-top:3.5rem;border-top:1px solid rgba(255,255,255,.1)}
+  .trait{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:2.2rem}
+  .trait .rule{width:28px;height:3px;background:var(--gold);margin-bottom:1.3rem}
+  .trait h4{font-size:1.3rem;font-weight:700;margin:0 0 .8rem}
+  .trait p{font-size:.95rem;opacity:.8}
+
+  /* NOT DO */
+  .notdo{display:flex;justify-content:space-between;align-items:center;gap:3rem;
+         border-bottom:1px solid rgba(42,26,66,.12);padding-bottom:4rem}
+  .notdo .copy{max-width:780px}
+  .notdo h2{font-size:2.3rem;font-weight:700;margin:0 0 1.2rem}
+  .notdo p{font-size:1.05rem;opacity:.85}
+
+  /* HOW WE WORK */
+  .work-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem}
+  .work-grid h2{font-size:2.7rem;font-weight:700;margin:0 0 1.6rem;line-height:1.12}
+  .work-lede{font-size:1.1rem;opacity:.85;margin:0 0 2.5rem}
+  .work-item{display:flex;gap:1.3rem;padding-top:1.4rem;margin-bottom:1.4rem;border-top:1px solid rgba(42,26,66,.12)}
+  .work-item .sym{font-size:1.3rem;color:var(--deep);line-height:1;margin-top:.1rem}
+  .work-item .t{font-weight:700;font-size:1.05rem;margin-bottom:.3rem}
+  .work-item .d{font-size:.93rem;opacity:.8;line-height:1.5}
+  .quote{background:var(--night);color:var(--petal);padding:2.8rem;font-family:'Playfair Display',Georgia,serif;
+         font-size:1.7rem;font-style:italic;line-height:1.35}
+  .quote .src{font-family:'Public Sans',sans-serif;font-style:normal;font-size:.75rem;text-transform:uppercase;
+              letter-spacing:.15em;margin-top:1.6rem;color:var(--gold)}
+  .commit{background:var(--night);color:var(--petal);padding:2.4rem 2.8rem;flex:1;
+          display:flex;flex-direction:column;justify-content:center}
+  .commit .k{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.65);margin-bottom:1.3rem}
+  .commit div.row{font-size:1rem;margin-bottom:.9rem}
+  .rail{display:flex;flex-direction:column;gap:1.5rem}
+
+  /* CONTACT */
+  .contact{text-align:center}
+  .contact .inner{max-width:900px;margin:0 auto}
+  .contact h2{font-size:3.2rem;font-weight:700;margin:0 0 1.4rem;line-height:1.1}
+  .contact h2 span{color:var(--gold)}
+  .contact .lede{font-size:1.1rem;opacity:.8;margin:0 0 3.5rem}
+  form{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);padding:3.5rem;text-align:left}
+  fieldset{border:none;margin-bottom:2.5rem}
+  legend{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.55);margin-bottom:.9rem}
+  .sentence{font-size:1.2rem;line-height:2.1}
+  input,select,textarea{background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.3);
+    color:var(--petal);font-family:'Public Sans',sans-serif;font-size:1.1rem;padding:0 .4rem;outline:none}
+  input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+  input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45)}
+  textarea{width:100%;border:1px solid rgba(255,255,255,.2);font-size:1rem;padding:1rem;min-height:110px;
+    margin-top:1rem;resize:vertical}
+  select option{background:var(--night)}
+  .submit{background:var(--gold);color:var(--night);border:none;padding:1.1rem 3rem;font-weight:700;
+    text-transform:uppercase;letter-spacing:.08em;font-size:.9rem;cursor:pointer;font-family:'Public Sans',sans-serif}
+  .submit:hover{opacity:.88}
+  .formnote{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:1.2rem}
+
+  /* FOOTER */
+  footer{background:var(--night);color:var(--petal);padding:5rem 3rem 2.5rem;border-top:1px solid rgba(255,255,255,.06)}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1.3fr;gap:4rem;margin-bottom:3.5rem}
+  .foot-brand{max-width:360px}
+  .foot-brand .lockup{display:flex;align-items:center;gap:.6rem;margin-bottom:1.3rem}
+  .foot-brand .name{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;font-weight:800}
+  .foot-brand .name span{color:var(--gold)}
+  .foot-brand p{opacity:.7;font-size:.95rem;margin:0 0 1.4rem}
+  .foot-brand .tag{color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+  .foot-col .k{font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.5);margin-bottom:1.3rem}
+  .foot-col .links{display:flex;flex-direction:column;gap:.8rem;font-size:.95rem;opacity:.85}
+  .foot-col a{color:inherit;text-decoration:none}
+  .foot-col a:hover{color:var(--gold)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;
+    padding-top:1.8rem;border-top:1px solid rgba(255,255,255,.1);font-size:.8rem;opacity:.65;line-height:1.5}
+  .foot-bottom div{margin:0}
+
+  @media (max-width:1040px){
+    header.hero{padding:3rem 2rem 3.5rem}
+    .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+    .hero-copy h1{font-size:3rem}
+    .hero-panel{min-height:340px;padding:2.5rem 1.5rem}
+    section{padding:4rem 2rem}
+    .svc-head,.cards,.who-grid,.traits,.work-grid,.foot-grid{grid-template-columns:1fr;gap:2.5rem}
+    .notdo{flex-direction:column;align-items:flex-start}
+    nav{padding:1rem 1.5rem}
+    .navlinks{gap:1.2rem}
+    .contact h2,.who-section h2{font-size:2.4rem}
+    form{padding:2rem}
+    footer{padding:3.5rem 2rem 2rem}
+  }
+
+  /* PHONES — !important is needed where the HTML sets padding or size inline */
+  @media (max-width:640px){
+    html{-webkit-text-size-adjust:100%}
+    .justify{text-align:left;hyphens:manual}
+
+    nav{padding:.6rem 1rem;gap:.3rem;justify-content:flex-start}
+    nav>.btn-violet{display:none}
+    .brand .name{font-size:1.2rem}
+    .navlinks{width:100%;justify-content:space-between;gap:.5rem;font-size:.68rem;letter-spacing:.04em;white-space:nowrap}
+    .navlinks a{padding:.45rem 0}
+
+    header.hero{padding:2rem 1rem 3rem}
+    section{padding:3.25rem 1rem !important}
+    footer{padding:3rem 1rem 1.75rem}
+
+    .hero-copy h1{font-size:2.5rem}
+    .hero-copy p{font-size:1.05rem}
+    .hero-cta .btn,.notdo .btn{width:100%;text-align:center}
+    .hero-panel{min-height:0;padding:2.5rem 1.25rem}
+    .svc-head{gap:1rem;margin-bottom:2rem}
+    .svc-head h2,.work-grid h2,.notdo h2{font-size:2rem}
+    .who-section h2,.contact h2{font-size:2.1rem !important}
+    .pull{font-size:1.5rem}
+    .triad{font-size:1.3rem}
+
+    .card{padding:1.75rem 1.35rem}
+    .panel,.trait{padding:1.5rem}
+    .traits{margin-top:3rem;padding-top:2.5rem}
+    .notdo{padding-bottom:0;gap:1.75rem}
+    .quote{padding:1.75rem;font-size:1.35rem}
+    .commit{padding:1.75rem}
+
+    .contact .lede br{display:none}
+    form{padding:1.35rem}
+    .sentence{font-size:1.05rem;line-height:1.9}
+    .sentence input{display:block;width:100% !important;margin:.1rem 0 .5rem;padding:.35rem .2rem}
+    .sentence .dot{display:none}
+    .submit{width:100%;padding:1.1rem 1rem}
+    .foot-bottom{flex-direction:column;align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav>
+  <div class="brand">
+    <!-- CanBe sub-logo (badge on Violet Night tile) — same mark used in the footer and hero -->
+    <svg width="34" height="34" viewBox="0 0 1000 1000" role="img" aria-label="CanBe mark">
+      <defs><linearGradient id="navG" gradientUnits="userSpaceOnUse" x1="207.6" y1="0" x2="843.2" y2="0">
+        <stop offset="0" stop-color="#8A4FBF"/><stop offset=".524" stop-color="#C09FDF"/><stop offset="1" stop-color="#C8A951"/>
+      </linearGradient></defs>
+      <rect width="1000" height="1000" rx="200" fill="#2A1A42"/>
+      <path fill="url(#navG)" fill-rule="evenodd"
+        d="M207.6,270.0 L540.9,270.0 L843.2,500.0 L540.9,730.0 L207.6,730.0 Z M288.9,351.3 L516.5,351.3 L714.8,500.0 L516.5,648.7 L288.9,648.7 Z"/>
+    </svg>
+    <div class="name">Can<span>Be</span> Consulting</div>
+  </div>
+  <div class="navlinks">
+    <a href="#services">Services</a>
+    <a href="#who-we-are">Who We Are</a>
+    <a href="#how-we-work">How We Work</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="btn btn-violet" href="mailto:canbeconsulting@ik.me?subject=Starting%20the%20honest%20conversation">Start a Conversation</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+ <div class="hero-inner">
+  <div class="hero-copy">
+    <div class="eyebrow">Human. Honest. Forward.</div>
+    <h1>What <em>Can</em> Your Legacy <em>Be</em>?</h1>
+    <p>Built for a world where AI can do everything except the things that matter most. CanBe Consulting delivers the human work — accountability, trust, judgment, presence — that no model can replicate.</p>
+    <div class="hero-cta">
+      <a class="btn btn-night" href="mailto:canbeconsulting@ik.me?subject=Starting%20the%20honest%20conversation">Start a Conversation</a>
+      <div class="hero-note">AI-Resilient<br>Consulting Services</div>
+    </div>
+  </div>
+
+  <!-- Branded panel using the CanBe badge (inline SVG — nothing external to load) -->
+  <aside class="hero-panel">
+    <svg viewBox="0 0 391 283" role="img" aria-label="CanBe badge">
+      <defs><linearGradient id="heroG" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="391" y2="0">
+        <stop offset="0" stop-color="#8A4FBF"/><stop offset=".524" stop-color="#C09FDF"/><stop offset="1" stop-color="#C8A951"/>
+      </linearGradient></defs>
+      <path fill="url(#heroG)" fill-rule="evenodd"
+        d="M0,0 L205,0 L391,141.5 L205,283 L0,283 Z M50,50 L190,50 L312,141.5 L190,233 L50,233 Z"/>
+    </svg>
+    <div class="line">"Imagine what can be."</div>
+    <div class="sub">Human. Honest. Forward.</div>
+  </aside>
+ </div>
+</header>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" style="border-top:1px solid rgba(42,26,66,.1)">
+  <div class="wrap">
+    <div class="svc-head">
+      <div>
+        <div class="eyebrow">Our Frameworks</div>
+        <h2>The Work Only a Human Can Do</h2>
+      </div>
+      <p class="justify">Three practice areas deliberately designed around capabilities AI cannot replicate. Each requires human presence, lived experience, accountability, and trust.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="top"><div class="label">Practice 01</div><div class="num">01</div></div>
+        <h3>People, Culture &amp; Workplace Integrity</h3>
+        <div class="block"><div class="k">Current Reality</div>
+          <p class="justify">Your organisation has a culture problem no survey can diagnose — harassment, silence, broken trust, or leadership that has become the problem.</p></div>
+        <div class="block gold"><div class="k">CanBe Vision</div>
+          <p class="justify">We provide confidential advisory support to individuals and organisations navigating harassment, institutional silence, and toxic culture — helping teams rebuild trust and integrity.</p></div>
+        <details>
+          <summary><span>What we do that AI cannot</span><span>→</span></summary>
+          <ul>
+            <li><span>Workplace harassment advisory &amp; tribunal preparation</span></li>
+            <li><span>Confidential diagnostic conversations with leaders</span></li>
+            <li><span>Trust repair after institutional failure</span></li>
+            <li><span>Dignity at work policy design from lived experience</span></li>
+            <li><span>Cross-cultural conflict navigation (EN / FR / ES)</span></li>
+            <li><span>Whistleblower support &amp; institutional accountability</span></li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="card">
+        <div class="top"><div class="label">Practice 02</div><div class="num">02</div></div>
+        <h3>Leadership Development &amp; Executive Advisory</h3>
+        <div class="block"><div class="k">Current Reality</div>
+          <p class="justify">Executives don't pay for information — AI gives that for free. They pay for someone who will tell them the truth about themselves when the stakes are highest.</p></div>
+        <div class="block gold"><div class="k">CanBe Vision</div>
+          <p class="justify">The ongoing conversation with no agenda, no deliverable, and no audience except the leader who needs it most — available when the situation demands it.</p></div>
+        <details>
+          <summary><span>What we do that AI cannot</span><span>→</span></summary>
+          <ul>
+            <li><span>Confidential executive advisory retainer</span></li>
+            <li><span>Cross-cultural coaching in English &amp; French</span></li>
+            <li><span>Leadership presence under institutional pressure</span></li>
+            <li><span>Navigating institutional politics without losing integrity</span></li>
+            <li><span>Francophone leadership in Canadian &amp; EU contexts</span></li>
+            <li><span>Women in male-dominated institutions</span></li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="card">
+        <div class="top"><div class="label">Practice 03</div><div class="num">03</div></div>
+        <h3>Organisational Strategy &amp; Human-Centred Change</h3>
+        <div class="block"><div class="k">Current Reality</div>
+          <p class="justify">Organisations don't fail at strategy. They fail at the human reality of executing it — resistance, grief, lost identity, and the leader who cannot say the hard thing.</p></div>
+        <div class="block gold"><div class="k">CanBe Vision</div>
+          <p class="justify">We focus on the human layer: creating conditions for real conversations, building coherence and advancing human sustainability.</p></div>
+        <details>
+          <summary><span>What we do that AI cannot</span><span>→</span></summary>
+          <ul>
+            <li><span>Strategic facilitation — the conversation behind the agenda</span></li>
+            <li><span>Change navigation &amp; building genuine commitment</span></li>
+            <li><span>Resistance diagnosis: political dynamics &amp; broken trust</span></li>
+            <li><span>Cross-border integration (Canada, USA &amp; EU)</span></li>
+            <li><span>Values architecture: from stated to lived</span></li>
+            <li><span>Post-crisis stabilisation &amp; multi-jurisdictional governance</span></li>
+          </ul>
+        </details>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHO WE ARE ============ -->
+<section id="who-we-are" class="dark who-section" style="padding:6.5rem 3rem">
+  <div class="wrap">
+    <div class="eyebrow">The Architects</div>
+    <h2 style="font-size:3.2rem;font-weight:700;margin:0 0 3rem">Who We Are</h2>
+
+    <div class="who-grid">
+      <div>
+        <h3 class="pull">"The clients who need CanBe Consulting are not looking for a strategy deck."</h3>
+        <p class="justify">They are looking for the person who will tell them the truth, stay in the room, and help them build what comes next. They have often already tried the large firm with the polished process.</p>
+        <p class="justify" style="margin-bottom:2.5rem">They are now ready for the honest conversation.</p>
+
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem">Why CanBe Is Different</div>
+        <ul class="creds">
+          <li><span>First-hand experience in large institutional, complex human and legal issues</span></li>
+          <li><span>Cross-cultural fluency in English &amp; French</span></li>
+          <li><span>Deep roots in Eastern Canadian and European French-speaking communities</span></li>
+          <li><span>Direct experience across Canadian, US and European contexts</span></li>
+          <li><span>Multilingual institutional navigation at senior level</span></li>
+        </ul>
+
+        <div class="triad">We listen. We leverage. We engage.</div>
+      </div>
+
+      <div class="rail">
+        <div class="panel">
+          <div class="k">Our Market Position</div>
+          <h3>The consulting market is bifurcating.</h3>
+          <p class="justify" style="font-size:.98rem;opacity:.8;margin:0 0 1.8rem">On one side: large firms investing billions in AI infrastructure, racing to productise knowledge. On the other: accountability, trust, judgment, presence — which those same firms are increasingly too large to deliver at the individual level.</p>
+          <div style="display:flex;align-items:center;gap:1.2rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.1)">
+            <div style="background:var(--gold);color:var(--night);padding:.5rem .7rem;font-weight:800;font-size:1.1rem">CB</div>
+            <div>
+              <div style="font-weight:700;font-size:.98rem">CanBe Consulting</div>
+              <div style="font-size:.88rem;opacity:.75">Occupies the second territory. Deliberately. Entirely.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="k">Languages of Delivery</div>
+          <div class="langs"><div>English</div><div>Français</div></div>
+          <p class="justify" style="font-size:.95rem;opacity:.8;margin:0">Bilingual engagements — where the language of the room shifts mid-conversation — are a core capability.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="traits">
+      <div class="trait"><div class="rule"></div><h4>Human Presence</h4>
+        <p class="justify">We don't produce reports that sit on shelves. The work is relational, iterative and grounded in what is actually happening — which requires sustained human presence, not a project plan.</p></div>
+      <div class="trait"><div class="rule"></div><h4>Radical Honesty</h4>
+        <p class="justify">We don't take engagements where we cannot be honest. If a client does not want the truth, we are not the right firm. That is not a policy — it is the definition of what we offer.</p></div>
+      <div class="trait"><div class="rule"></div><h4>Forward Momentum</h4>
+        <p class="justify">Built intentionally, from first principles, for this moment in the consulting industry. Not reacting to AI — positioned ahead of it, in the territory it will never occupy.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT WE DO NOT DO ============ -->
+<section style="padding:4.5rem 3rem">
+  <div class="wrap notdo">
+    <div class="copy">
+      <div class="eyebrow" style="color:var(--deep)">What We Do Not Do</div>
+      <h2>We don't compete with AI on AI's terms.</h2>
+      <p class="justify">We may use benchmarks but we build evidence-based analysis. We don't deliver off-the-shelf reports or recycled slide decks. CanBe Consulting focuses on the problems unique to your organisation or particular situation: workplace culture, leadership, trust, and human-centred change that only honest conversation and lived judgment can resolve.</p>
+    </div>
+    <a class="btn btn-violet" href="mailto:canbeconsulting@ik.me?subject=Starting%20the%20honest%20conversation" style="padding:1.1rem 2.2rem;font-size:.8rem;white-space:nowrap">Start a Conversation</a>
+  </div>
+</section>
+
+<!-- ============ HOW WE WORK ============ -->
+<section id="how-we-work" style="padding:4rem 3rem 6rem">
+  <div class="wrap">
+    <div class="eyebrow">How We Work</div>
+    <div class="work-grid">
+      <div>
+        <h2>Relational. Iterative. Grounded.</h2>
+        <p class="work-lede justify">CanBe Consulting does not produce reports that sit on shelves. It does not deliver a findings deck and disappear. The work requires sustained human presence — not a project plan.</p>
+
+        <div class="work-item"><div class="sym">◈</div><div>
+          <div class="t">Confidential Advisory Retainer</div>
+          <div class="d justify">Ongoing counsel for leaders and executive teams, available when the situation demands it — not just at scheduled intervals.</div></div></div>
+        <div class="work-item"><div class="sym">◉</div><div>
+          <div class="t">Defined Engagement</div>
+          <div class="d justify">For organisations facing a specific, bounded challenge with a clear trigger moment and desired outcome.</div></div></div>
+        <div class="work-item"><div class="sym">◎</div><div>
+          <div class="t">Facilitated Sessions</div>
+          <div class="d justify">For leadership teams, boards or cross-functional groups that need a trusted neutral to hold the room.</div></div></div>
+        <div class="work-item"><div class="sym">◆</div><div>
+          <div class="t">Intensive Advisory</div>
+          <div class="d justify">Concentrated short-form engagements for urgent, high-stakes situations where speed and presence both matter.</div></div></div>
+        <div class="work-item"><div class="sym">◑</div><div>
+          <div class="t">International Remote Delivery</div>
+          <div class="d justify">Fully capable across time zones, in English or French — including bilingual engagements.</div></div></div>
+      </div>
+
+      <div class="rail">
+        <div class="quote">"Imagine what can be — when your organisation finally has the honest conversation it has been avoiding."
+          <div class="src">CanBe Consulting</div>
+        </div>
+        <div class="commit">
+          <div class="k">Our Commitments</div>
+          <div class="row"><strong>Human</strong> &nbsp;·&nbsp; We are present. &nbsp;We listen.</div>
+          <div class="row"><strong>Honest</strong> &nbsp;·&nbsp; We tell you what you need to hear.</div>
+          <div class="row"><strong>Forward</strong> &nbsp;·&nbsp; We help you build what comes next.</div>
+        </div>
+        <a class="btn btn-gold" href="mailto:canbeconsulting@ik.me?subject=Starting%20the%20honest%20conversation">Begin the Conversation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="dark contact" style="padding:7rem 3rem">
+  <div class="inner">
+    <div class="eyebrow">The Catalyst</div>
+    <h2>Start the Honest<br><span>Conversation.</span></h2>
+    <p class="lede">This is not a contact form. This is the beginning of a partnership.<br>Tell us what you're carrying.</p>
+
+    <form action="mailto:canbeconsulting@ik.me" method="post" enctype="text/plain">
+      <fieldset>
+        <legend>Who You Are</legend>
+        <div class="sentence">
+          My name is <input type="text" name="Name" placeholder="your name" required style="width:180px">
+          and I lead <input type="text" name="Organisation" placeholder="your organisation" style="width:200px">
+          as <input type="text" name="Role" placeholder="your role" style="width:180px"><span class="dot">.</span>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>The Challenge</legend>
+        <div style="font-size:1.1rem">The real challenge we are facing right now is:</div>
+        <textarea name="Challenge" required placeholder="describe what's actually happening — not the official version"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>What You Need</legend>
+        <div class="sentence">
+          We need support with <input type="text" name="Needs Support With" placeholder="culture, leadership, strategy" style="width:280px"><span class="dot">.</span>
+        </div>
+      </fieldset>
+
+      <fieldset style="margin-bottom:0">
+        <legend>How To Reach You</legend>
+        <div class="sentence">
+          Reach me at <input type="email" name="Email" placeholder="your@email.com" required style="width:220px">
+          in
+          <select name="Language">
+            <option value="English">English</option>
+            <option value="Français">Français</option>
+          </select>.
+        </div>
+      </fieldset>
+
+      <div style="text-align:center;margin-top:3.5rem">
+        <button class="submit" type="submit">Start the Conversation</button>
+        <p class="formnote">All communications are strictly confidential. We make all possible attempts to respond within 2 business days.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="lockup">
+          <svg width="42" height="30" viewBox="0 0 391 283" role="img" aria-label="CanBe mark">
+            <defs><linearGradient id="footG" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="391" y2="0">
+              <stop offset="0" stop-color="#8A4FBF"/><stop offset=".524" stop-color="#C09FDF"/><stop offset="1" stop-color="#C8A951"/>
+            </linearGradient></defs>
+            <path fill="url(#footG)" fill-rule="evenodd"
+              d="M0,0 L205,0 L391,141.5 L205,283 L0,283 Z M50,50 L190,50 L312,141.5 L190,233 L50,233 Z"/>
+          </svg>
+          <div class="name">Can<span>Be</span> Consulting</div>
+        </div>
+        <p class="justify">Built for a world where AI can do everything except the things that matter most.</p>
+        <div class="tag">Human. Honest. Forward.</div>
+      </div>
+
+      <div class="foot-col">
+        <div class="k">Navigation</div>
+        <div class="links">
+          <a href="#services">Services</a>
+          <a href="#who-we-are">Who We Are</a>
+          <a href="#how-we-work">How We Work</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <div class="k">Get In Touch</div>
+        <div class="links">
+          <a href="mailto:canbeconsulting@ik.me">Send us a confidential message</a>
+        </div>
+        <div style="display:flex;gap:.5rem;margin-top:1.4rem">
+          <div style="border:1px solid rgba(255,255,255,.2);padding:.4rem .7rem;font-size:.78rem">EN</div>
+          <div style="border:1px solid rgba(255,255,255,.2);padding:.4rem .7rem;font-size:.78rem">FR</div>
+          <div style="border:1px solid rgba(255,255,255,.2);padding:.4rem .7rem;font-size:.78rem">ES</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div>© 2026 CanBe Consulting. All rights reserved.</div>
+      <div>We are not legal advice. We follow GDPR and all privacy laws of your jurisdiction.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
